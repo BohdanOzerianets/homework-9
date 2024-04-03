@@ -50,7 +50,7 @@
           Ефективні рішення для <br />
           вашого бізнесу
         </h1>
-        <button class="button" type="button">Замовити послугу</button>
+        <button class="button" type="button" data-open-modal>Замовити послугу</button>
       </section>
       <!-- Features -->
       <section class="section features">
@@ -366,5 +366,38 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut incidunt a sequi nostrum culpa
+          nulla amet! Harum assumenda iusto, commodi ipsum id iste nesciunt atque asperiores illum
+          molestias? Natus odio aperiam inventore ipsam fuga est quaerat esse nemo ullam corporis,
+          ut quisquam, vitae alias dicta unde. Quaerat nesciunt debitis magni.
+        </p>
+
+        <button class="btn-close" data-close-modal>
+          <img class="icon-close" src="./images/close-icon.svg" alt="крестик" />
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-open-modal]'),
+        closeModalBtn: document.querySelector('[data-close-modal]'),
+        modal: document.querySelector('[data-backdrop]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      function toggleModal() {
+        refs.modal.classList.toggle('is-hidden');
+      }
+      function logBackdropClick() {
+        console.log('Это клик по бекдроп');
+      }
+    </script>
   </body>
 </html>

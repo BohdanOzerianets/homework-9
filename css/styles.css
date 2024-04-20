@@ -939,20 +939,24 @@ text-align: left;
 }
 
 .btn-close{
+    display: flex;
     position: absolute;
     top: 8px;
     right: 8px;
     width: 30px;
     height: 30px;
-    border: 1px solid black;
+    border: 0;
     border-radius: 50%;
     background: #fff;
+    align-items: center;
     box-shadow: 0px 2px 1px rgba(0,0,0,0.2), 0px 1px 1px rgba(0,0,0,0.14), 0px 1px 3px rgba(0,0,0,0.12);
     cursor: pointer;
-    scale: 1.1;
+    padding: 1px 6px;
+   
 }
 
 .btn-close .icon-close{
-    padding-top: 5px;
-    padding-bottom: 5px;
+    fill: var(--logo-color);
+
+    background-size: contain;
 }

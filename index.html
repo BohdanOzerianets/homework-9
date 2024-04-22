@@ -387,16 +387,60 @@
 
     <div class="backdrop is-hidden" data-backdrop>
       <div class="modal">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut incidunt a sequi nostrum culpa
-          nulla amet! Harum assumenda iusto, commodi ipsum id iste nesciunt atque asperiores illum
-          molestias? Natus odio aperiam inventore ipsam fuga est quaerat esse nemo ullam corporis,
-          ut quisquam, vitae alias dicta unde. Quaerat nesciunt debitis magni.
-        </p>
-
         <button class="btn-close" data-close-modal>
-          <img src="./images/close-icon.svg" alt="хрестик" />
+          <img src="./images/icon-close.svg" alt="хрестик" />
         </button>
+        <h3 class="title">Залиште свої дані, ми вам передзвонимо</h3>
+        <form class="form">
+          <label class="form-field">
+            <span class="form-label">Ім'я</span>
+            <input class="form-input" type="text" name="name" placeholder=" " />
+            <span class="icon">
+              <svg class="icon-email" width="18px" height="18px">
+                <use href="./images/sprite.svg#icon-person"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="form-field">
+            <span class="form-label">Телефон</span>
+            <input class="form-input" type="tel" name="tel" placeholder=" " />
+            <span class="icon">
+              <svg class="icon-email" width="18px" height="18px">
+                <use href="./images/sprite.svg#icon-tel"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="form-field">
+            <span class="form-label">Пошта</span>
+            <input class="form-input" type="email" name="email" placeholder=" " />
+            <span class="icon">
+              <svg class="icon-email" width="18px" height="18px">
+                <use href="./images/sprite.svg#icon-email"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="form-field">
+            <span class="form-label">Коментар</span>
+            <textarea
+              class="comment"
+              name="comment"
+              rows="10"
+              placeholder="Введіть текст"
+            ></textarea>
+          </label>
+
+          <label class="policy">
+            <input class="form-input" type="checkbox" name="checkbox" placeholder=" " />
+            <span class="form-label"
+              >Погоджуюся з розсилкою та приймаю <a href="#" class="accent">Умови договору</a></span
+            >
+          </label>
+
+          <button class="button" type="submit">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="./modal.js"></script>

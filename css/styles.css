@@ -975,11 +975,7 @@ text-align: left;
     outline: none;
 }
 
-.modal .checkbox{
-    display: block;
-    margin-top: 20px;
-    height: 24px;
-}
+
 
 .modal .button{
     margin-top: 30px;
@@ -1030,7 +1026,7 @@ text-align: left;
 
 .modal .policy{
     display: flex;
-    align-items: center;
+
     margin-top: 20px;
 }
 
@@ -1047,33 +1043,53 @@ text-align: left;
 
 .form-input:focus ~ .icon{
     fill: var(--accent-color);
-}
+} 
 
 .modal .form-input:focus, .modal .comment:focus{
     border: 1px solid var(--accent-color);
 }
 
-.policy .form-input{
-    display: inline;
+.modal .checkbox{
+    appearance: none;
+
+    display: block;
     height: 24px;
-    margin-top: 0;
-    margin-left: 12px;
-    margin-right: 8px;
+    overflow: hidden;
+}
+
+.policy{
+ display: flex;
+ align-items: center;
 }
 
 .policy .form-label{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    margin-left: 10px;
 }
 
+.icon-policy{
 
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+
+    border: 2px solid var(--primary-text-color);
+    border-radius: 4px;
+}
 
 .policy .accent{
     color: var(--accent-color);
 }
 
-
+.checkbox:checked + .icon-policy{
+    border-color: transparent;
+    background-color: orange;
+    background-image: url("../images/check.svg");
+    background-size: contain;
+    background-origin: border-box;
+}
 
 
 .btn-close{
